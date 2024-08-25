@@ -5,7 +5,7 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div>213123</div>
+    <div className='bg-blue-500'>213123</div>
   )
 }
 
