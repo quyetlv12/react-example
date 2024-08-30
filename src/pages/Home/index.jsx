@@ -12,6 +12,7 @@ import img10 from '../../assets/img/Frame 61.png'
 import img11 from '../../assets/img/Frame 62.png'
 import img12 from '../../assets/img/Frame 63.png'
 import img13 from '../../assets/img/Frame 64.png'
+import img14 from '../../assets/img/Frame 11.png'
 
 const Home = () => {
   return (
@@ -51,7 +52,13 @@ const Home = () => {
               <div className='w-3/12'>
                 <img src={img3} alt="" />
                 <p className='font-bold'>SKINNY FIT JEANS</p>
-                <p className='font-bold'>$210</p>
+               
+                <div className='flex'>
+                  <p className='font-bold '>$210</p>
+                  <p className='line-through pl-2 text-gray-300'>$260</p>
+                  <p className='text-red-400 bg-red-200 rounded-xl  p-1 text-xs ml-2'>-20%</p>
+                </div>
+                
               </div>
               <div className='w-3/12'>
                 <img src={img4} alt="" />
@@ -61,11 +68,16 @@ const Home = () => {
               <div className='w-3/12'>
                 <img src={img5} alt="" /> 
                 <p className='font-bold'>SLEEVE STRIPED T-SHIRT</p>
-                <p className='font-bold'>$210</p>
+                
+                <div className='flex'>
+                  <p className='font-bold'>$130</p>
+                  <p className='line-through text-gray-200 pl-2'>$160</p>
+                  <p className='text-red-400 bg-red-200 rounded-xl text-xs p-1 ml-2'>-30%</p>
+                </div>
               </div>
           </div>
           <div className='flex justify-center mt-5'>
-          <button className='w-[200px] border-2  px-5 py-2 text-centern rounded-xl '>View All</button>
+          <button className='w-[200px] border-2  px-5 py-2 text-centern rounded-xl hover:bg-black hover:text-white '>View All</button>
           </div>
           
         </section>
@@ -75,7 +87,12 @@ const Home = () => {
               <div className='w-3/12'>
                 <img src={img6} alt="" />
                 <p className='font-bold'>VERTICAL STRIPED SHIRT</p>
-                <p className='font-bold'>$210</p>
+                
+                <div className='flex'>
+                  <p className='font-bold'>$212</p>
+                  <p className='line-through text-gray-300 pl-2'>$232</p>
+                  <p className='text-red-400 bg-red-200 text-xs p-1 ml-2 rounded-xl'>-20%</p>
+                </div>
               </div>
               <div className='w-3/12'>
                 <img src={img7} alt="" />
@@ -94,7 +111,7 @@ const Home = () => {
               </div>
           </div>
           <div className='flex justify-center mt-5'>
-          <button className='w-[200px] border-2  px-5 py-2 text-centern rounded-xl'>View All</button>
+          <button className='w-[200px] border-2  px-5 py-2 text-centern rounded-xl hover:bg-black hover:text-white'>View All</button>
           </div>
         </section>
         <section className='flex flex-col bg-gray-200 m-8 rounded-3xl py-8 '>

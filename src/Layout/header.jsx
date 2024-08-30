@@ -37,27 +37,27 @@ const Header = () => {
       <nav className="hidden md:flex md:flex-grow justify-center">
         <ul className="flex justify-center space-x-4 text-white">
           <li>
-            <a href="/" className="hover:text-secondary font-bold">
+            <a href="/" className="hover:text-secondary hover:text-black font-bold">
               Trang chủ 
             </a>
           </li>
           <li>
-            <a href="/product" className="hover:text-secondary font-bold">
+            <a href="/product" className="hover:text-secondary hover:text-black font-bold">
               Về chúng tôi 
             </a>
           </li>
           <li>
-            <a href="/category" className="hover:text-secondary font-bold">
+            <a href="/category" className="hover:text-secondary hover:text-black font-bold">
               sản phẩm 
             </a>
           </li>
           <li>
-            <a href="#reviews" className="hover:text-secondary font-bold">
+            <a href="#reviews" className="hover:text-secondary hover:text-black font-bold">
               Liên hệ 
             </a>
           </li>
           <li>
-            <a href="/cart" className="hover:text-secondary font-bold">
+            <a href="/cart" className="hover:text-secondary hover:text-black font-bold">
             <i class="fas fa-shopping-cart"></i>
             </a>
           </li>

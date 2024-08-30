@@ -28,7 +28,12 @@ const Product = () => {
                 <div>
                     <h1 className='text-2xl font-bold'>ONE LIFE GRAPHIC T-SHIRT</h1>
                     <img src={img5} alt="" />
-                    <h1 className='text-2xl font-bold'>$250</h1>
+                    <div className='flex'>
+                        <p className='text-2xl font-bold'>$260</p>
+                        <p className='line-through text-2xl text-gray-400 pl-2'>$300</p>
+                        <p className='text-red-400 bg-red-200 p-1 rounded-2xl ml-2'>-40%</p>
+                    </div>
+                    
                     <p>This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.</p>
                 </div>
                 <div className='my-2 py-2 border-t-2 '>
@@ -38,10 +43,10 @@ const Product = () => {
                 <div className='pb-2 border-t-2'>
                     <p>Choose Colors</p>
                     <div>
-                        <button className='border-2 bg-gray-200 rounded-3xl p-2 mr-2'>Small</button>
-                        <button className='border-2 bg-gray-200 rounded-3xl p-2 m-2'>Medium</button>
-                        <button className='border-2 bg-gray-200 rounded-3xl p-2 m-2'>Large</button>
-                        <button className='border-2 bg-gray-200 rounded-3xl p-2 m-2'>X-Large</button>
+                        <button className='border-2 bg-gray-200 rounded-3xl hover:bg-black hover:text-white p-2 mr-2'>Small</button>
+                        <button className='border-2 bg-gray-200 rounded-3xl hover:bg-black hover:text-white p-2 m-2'>Medium</button>
+                        <button className='border-2 bg-gray-200 rounded-3xl hover:bg-black hover:text-white p-2 m-2'>Large</button>
+                        <button className='border-2 bg-gray-200 rounded-3xl hover:bg-black hover:text-white p-2 m-2'>X-Large</button>
                     </div>
                 </div>
                 <div className='flex border-t-2 p-2'>

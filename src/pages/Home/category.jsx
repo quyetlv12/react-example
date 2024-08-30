@@ -144,7 +144,11 @@ export const Category = () => {
                     <div className='m-2'>
                         <img src={img2} alt="" />
                         <p className='font-bold'>Gradient Graphic T-shirt</p>
-                        <p className='font-bold'>$200</p>
+                        <div className='flex'>
+                            <p className='font-bold'>$130</p>
+                            <p className='line-through text-gray-200 pl-2'>$160</p>
+                            <p className='text-red-400 bg-red-200 rounded-xl text-xs p-1 ml-2'>-30%</p>
+                        </div>
                     </div>
                     <div className='m-2'>
                         <img src={img3} alt="" />
@@ -161,7 +165,11 @@ export const Category = () => {
                     <div className='m-2'>
                         <img src={img1} alt="" />
                         <p className='font-bold'>Gradient Graphic T-shirt</p>
-                        <p className='font-bold'>$200</p>
+                        <div className='flex'>
+                            <p className='font-bold'>$130</p>
+                            <p className='line-through text-gray-200 pl-2'>$160</p>
+                            <p className='text-red-400 bg-red-200 rounded-xl text-xs p-1 ml-2'>-30%</p>
+                        </div>
                     </div>
                     <div className='m-2'>
                         <img src={img5} alt="" />
@@ -171,7 +179,11 @@ export const Category = () => {
                     <div className='m-2'>
                         <img src={img6} alt="" />
                         <p className='font-bold'>Gradient Graphic T-shirt</p>
-                        <p className='font-bold'>$200</p>
+                        <div className='flex'>
+                            <p className='font-bold'>$130</p>
+                            <p className='line-through text-gray-200 pl-2'>$160</p>
+                            <p className='text-red-400 bg-red-200 rounded-xl text-xs p-1 ml-2'>-30%</p>
+                        </div>
                     </div>
                 </div>
                 <div className='flex w-3/12 w-full'>
@@ -183,7 +195,11 @@ export const Category = () => {
                     <div className='m-2'>
                         <img src={img8} alt="" />
                         <p className='font-bold'>Gradient Graphic T-shirt</p>
-                        <p className='font-bold'>$200</p>
+                        <div className='flex'>
+                            <p className='font-bold'>$130</p>
+                            <p className='line-through text-gray-200 pl-2'>$160</p>
+                            <p className='text-red-400 bg-red-200 rounded-xl text-xs p-1 ml-2'>-30%</p>
+                        </div>
                     </div>
                     <div className='m-2'>
                         <img src={img9} alt="" />
@@ -192,9 +208,9 @@ export const Category = () => {
                     </div>
                 </div>
                 <div className='flex '>
-                    <button className='p-3 m-4 border-2 rounded-2xl '>Previous</button>
+                    <button className='p-3 m-4 border-2 rounded-2xl hover:bg-black hover:text-white'>Previous</button>
                    
-                    <button className='p-3 m-4 border-2 rounded-2xl ml-auto '>Next</button>
+                    <button className='p-3 m-4 border-2 rounded-2xl hover:bg-black hover:text-white ml-auto '>Next</button>
                    
                 </div>
             </div>
