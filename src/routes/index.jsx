@@ -19,6 +19,7 @@ const RouteRoot = () => {
                     <Route path={'/product'} element={<Product/>} />
                     <Route path='/category' element={<Category/>}/>
                     <Route path={'/cart'} element={<Cart/>}/>
+                    <Route path={'/product/:id'} element={<Product/>} />
                 </Routes>
             </Layout>
         </Router>

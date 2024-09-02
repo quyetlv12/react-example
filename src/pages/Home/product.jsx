@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import img1 from '../../assets/img/image 2.png'
 import img2 from '../../assets/img/image 5.png'
 import img3 from '../../assets/img/image 6.png'
@@ -9,8 +9,22 @@ import img7 from '../../assets/img/Frame 32 (2).png'
 import img8 from '../../assets/img/Frame 33 (2).png'
 import img9 from '../../assets/img/Frame 34 (2).png'
 import img10 from '../../assets/img/Frame 38 (2).png'
+import { useParams } from 'react-router'
+import { productService } from '../../services/product'
 
 const Product = () => {
+    const params = useParams()    
+    const [product, setProduct] = useState(null)
+    useEffect(() => {
+     const getDetail = async () => {
+        const res = await productService.getDetailProduct(params.id)
+        if (res.status === 200) {
+            setProduct(res.data)
+        }
+     }
+     getDetail()
+    }, [])
+    
   return (
     <div>
         <section className='flex'>
