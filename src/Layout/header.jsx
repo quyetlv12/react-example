@@ -43,19 +43,15 @@ const Header = () => {
           </li>
           <li>
             <a href="/product" className="hover:text-secondary hover:text-black font-bold">
-              Về chúng tôi 
+              Sản phẩm
             </a>
           </li>
           <li>
             <a href="/category" className="hover:text-secondary hover:text-black font-bold">
-              sản phẩm 
+              Danh mục
             </a>
           </li>
-          <li>
-            <a href="#reviews" className="hover:text-secondary hover:text-black font-bold">
-              Liên hệ 
-            </a>
-          </li>
+          
           <li>
             <a href="/cart" className="hover:text-secondary hover:text-black font-bold">
             <i class="fas fa-shopping-cart"></i>
@@ -81,62 +77,7 @@ const Header = () => {
     </div>
   </header>
   {/* Mobile menu */}
-  <nav
-    id="mobile-menu-placeholder"
-    className="mobile-menu hidden flex-col items-center space-y-8 md:hidden px-8"
-  >
-    <ul className="w-full text-center">
-      <li className="border-b border-gray-300 pb-4 pt-4">
-        <a href="/" className="hover:text-secondary font-bold">
-          Home
-        </a>
-      </li>
-      <li className="border-b border-gray-300 pb-4 pt-4">
-        <a href="/product" className="hover:text-secondary font-bold">
-          About us
-        </a>
-      </li>
-      <li className="border-b border-gray-300 pb-4 pt-4">
-        <a href="/category" className="hover:text-secondary font-bold">
-          Results
-        </a>
-      </li>
-      <li className="border-b border-gray-300 pb-4 pt-4">
-        <a href="#reviews" className="hover:text-secondary font-bold">
-          Reviews
-        </a>
-      </li>
-      <li className="border-b border-gray-300 pb-4 pt-4">
-        <a href="#portfolio" className="hover:text-secondary font-bold">
-          Portfolio
-        </a>
-      </li>
-      <li className="border-b border-gray-300 pb-4 pt-4">
-        <a href="#team" className="hover:text-secondary font-bold">
-          Team
-        </a>
-      </li>
-      <li className="pb-4 pt-4">
-        <a href="#contact" className="hover:text-secondary font-bold">
-          Contact
-        </a>
-      </li>
-    </ul>
-    <div className="flex flex-col mt-6 space-y-2 items-center">
-      <a
-        href="#"
-        className="bg-green-500 hover:bg-blue-500 text-white font-semibold px-4 py-2 rounded inline-block flex items-center justify-center min-w-[110px]"
-      >
-        Đăng Nhập 
-      </a>
-      <a
-        href="#"
-        className="bg-blue-500 hover:bg-green-500 text-white font-semibold px-4 py-2 rounded inline-block flex items-center justify-center min-w-[110px]"
-      >
-        Đăng ký
-      </a>
-    </div>
-  </nav>
+  
 </>
 
   )

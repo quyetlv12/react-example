@@ -119,14 +119,14 @@ const Home = () => {
             BROWSE BY DRESS STYLE
           </div>
          <div className='flex'>
-          <div >
-            <div className='flex text-center mx-40 my-3'>
-              <img src={img10} alt="" className='mr-3 ' />
-              <img src={img11} alt="" />
+          <div className='flex flex-col w-full' >
+            <div className='flex text-center p-7'>
+              <img src={img10} alt="" className='mr-10 w-4/12 ' />
+              <img src={img11} alt="" className='w-8/12'/>
             </div>
-            <div className='flex text-center mx-40 my-3'>
-              <img src={img13} alt="" className='mr-3' />
-              <img src={img12} alt="" />
+            <div className='flex text-center p-7 '>
+              <img src={img13} alt="" className='mr-10 w-8/12' />
+              <img src={img12} alt=""  className='w-4/12'/>
             </div>
             
           </div>

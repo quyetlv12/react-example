@@ -52,7 +52,7 @@ const Product = () => {
                 <div className='flex border-t-2 p-2'>
                     <div className='flex border-2 bg-gray-200 w-4/12 rounded-3xl'>
                         <button className='w-4/12 text-center '>-</button>
-                        <p className='w-4/12 text-center pt-5 '>1</p>
+                        <p className='w-4/12 text-center p-5 '>1</p>
                         <button className='w-4/12 text-center '>+</button>
                     </div>
                     <div className=' w-8/12 '>
