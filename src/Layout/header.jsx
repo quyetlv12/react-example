@@ -63,13 +63,13 @@ const Header = () => {
             </Link>
 
             <a
-              href="#"
+              href="/register"
               className="bg-green-500 hover:bg-blue-500 text-white font-semibold px-4 py-2 rounded inline-block"
             >
               Đăng ký
             </a>
             <a
-              href="#"
+              href="/login"
               className="bg-blue-500 hover:bg-green-500 text-white font-semibold px-4 py-2 rounded inline-block"
             >
               Đăng nhập

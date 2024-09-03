@@ -10,13 +10,14 @@ import img8 from '../../assets/img/Frame 34 (1).png'
 import img9 from '../../assets/img/Frame 38 (1).png'
 import { productAtom } from '../../store/product'
 import { useRecoilValue } from 'recoil'
+import { Link } from 'react-router-dom'
 export const Category = () => {
     const products = useRecoilValue(productAtom);
     console.log("products", products);
 
     return (
-        <div className='flex w-3/12 w-full  '>
-            <section  >
+        <div className='flex gap-5'>
+            <section className='w-4/12' >
                 <div className='border-2 m-3 p-2 rounded-2xl'>
                     <div className='text-xl font-bold'>
                         <div>Filters</div>
@@ -26,25 +27,25 @@ export const Category = () => {
                         <div className='flex w-full'>
                             <a href="" className='w-6/12'>T-shirt</a>
                             <button class="flex justify-end w-6/12">
-                                <i class="fas fa-chevron-right"></i>
+                                <i className="fas fa-chevron-right"></i>
                             </button>
                         </div>
                         <div className='flex w-full'>
                             <a href="" className='w-6/12'>Short</a>
                             <button class="flex justify-end w-6/12">
-                                <i class="fas fa-chevron-right"></i>
+                                <i className="fas fa-chevron-right"></i>
                             </button>
                         </div>
                         <div className='flex w-full'>
                             <a href="" className='w-6/12'>Shirts</a>
                             <button class="flex justify-end w-6/12">
-                                <i class="fas fa-chevron-right"></i>
+                                <i className="fas fa-chevron-right"></i>
                             </button>
                         </div>
                         <div className='flex w-full'>
                             <a href="" className='w-6/12'>T-shirt</a>
                             <button class="flex justify-end w-6/12">
-                                <i class="fas fa-chevron-right"></i>
+                                <i className="fas fa-chevron-right"></i>
                             </button>
                         </div>
                         <div className='flex w-full'>
@@ -112,25 +113,25 @@ export const Category = () => {
                             <div className='flex w-full'>
                                 <a href="" className='w-6/12'>Casual</a>
                                 <button class="flex justify-end w-6/12">
-                                    <i class="fas fa-chevron-right"></i>
+                                    <i className="fas fa-chevron-right"></i>
                                 </button>
                             </div>
                             <div className='flex w-full'>
                                 <a href="" className='w-6/12'>Formal</a>
                                 <button class="flex justify-end w-6/12">
-                                    <i class="fas fa-chevron-right"></i>
+                                    <i className="fas fa-chevron-right"></i>
                                 </button>
                             </div>
                             <div className='flex w-full'>
                                 <a href="" className='w-6/12'>Party</a>
                                 <button class="flex justify-end w-6/12">
-                                    <i class="fas fa-chevron-right"></i>
+                                    <i className="fas fa-chevron-right"></i>
                                 </button>
                             </div>
                             <div className='flex w-full'>
                                 <a href="" className='w-6/12'>Gym</a>
                                 <button class="flex justify-end w-6/12">
-                                    <i class="fas fa-chevron-right"></i>
+                                    <i className="fas fa-chevron-right"></i>
                                 </button>
                             </div>
 
@@ -142,83 +143,29 @@ export const Category = () => {
                     </div>
                 </div>
             </section>
-            <section>
-                <div className='flex flex-col m-4'>
-                    <h1 className='text-2xl font-bold'>Casual</h1>
-                    <div className='flex w-3/12 w-full'>
-                        <div className='m-2'>
-                            <img src={img2} alt="" />
-                            <p className='font-bold'>Gradient Graphic T-shirt</p>
-                            <div className='flex'>
-                                <p className='font-bold'>$130</p>
-                                <p className='line-through text-gray-200 pl-2'>$160</p>
-                                <p className='text-red-400 bg-red-200 rounded-xl text-xs p-1 ml-2'>-30%</p>
-                            </div>
-                        </div>
-                        <div className='m-2'>
-                            <img src={img3} alt="" />
-                            <p className='font-bold'>Gradient Graphic T-shirt</p>
-                            <p className='font-bold'>$200</p>
-                        </div>
-                        <div className='m-2'>
-                            <img src={img4} alt="" />
-                            <p className='font-bold'>Gradient Graphic T-shirt</p>
-                            <p className='font-bold'>$200</p>
-                        </div>
-                    </div>
-                    <div className='flex w-3/12 w-full'>
-                        <div className='m-2'>
-                            <img src={img1} alt="" />
-                            <p className='font-bold'>Gradient Graphic T-shirt</p>
-                            <div className='flex'>
-                                <p className='font-bold'>$130</p>
-                                <p className='line-through text-gray-200 pl-2'>$160</p>
-                                <p className='text-red-400 bg-red-200 rounded-xl text-xs p-1 ml-2'>-30%</p>
-                            </div>
-                        </div>
-                        <div className='m-2'>
-                            <img src={img5} alt="" />
-                            <p className='font-bold'>Gradient Graphic T-shirt</p>
-                            <p className='font-bold'>$200</p>
-                        </div>
-                        <div className='m-2'>
-                            <img src={img6} alt="" />
-                            <p className='font-bold'>Gradient Graphic T-shirt</p>
-                            <div className='flex'>
-                                <p className='font-bold'>$130</p>
-                                <p className='line-through text-gray-200 pl-2'>$160</p>
-                                <p className='text-red-400 bg-red-200 rounded-xl text-xs p-1 ml-2'>-30%</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='flex w-3/12 w-full'>
-                        <div className='m-2'>
-                            <img src={img7} alt="" />
-                            <p className='font-bold'>Gradient Graphic T-shirt</p>
-                            <p className='font-bold'>$200</p>
-                        </div>
-                        <div className='m-2'>
-                            <img src={img8} alt="" />
-                            <p className='font-bold'>Gradient Graphic T-shirt</p>
-                            <div className='flex'>
-                                <p className='font-bold'>$130</p>
-                                <p className='line-through text-gray-200 pl-2'>$160</p>
-                                <p className='text-red-400 bg-red-200 rounded-xl text-xs p-1 ml-2'>-30%</p>
-                            </div>
-                        </div>
-                        <div className='m-2'>
-                            <img src={img9} alt="" />
-                            <p className='font-bold'>Gradient Graphic T-shirt</p>
-                            <p className='font-bold'>$200</p>
-                        </div>
-                    </div>
-                    <div className='flex '>
-                        <button className='p-3 m-4 border-2 rounded-2xl hover:bg-black hover:text-white'>Previous</button>
+            <section className='w-8/12 mt-5'>
+            <div className='grid grid-cols-4 gap-5'>
+          {
+           
+            products.length > 0 && products.map((_item, index) => (
+              <div className='flex flex-col' key={index}>
+                <img src={_item?.thumnail} alt="" className='rounded-lg' />
+                <Link to={`/product/${_item?.id}`} >
+                  <p className='font-bold'>{_item?.name}</p>
+                </Link>
 
-                        <button className='p-3 m-4 border-2 rounded-2xl hover:bg-black hover:text-white ml-auto '>Next</button>
 
-                    </div>
+                <div className='flex'>
+                  <p className='font-bold '>${_item?.price}</p>
+                  <p className='line-through pl-2 text-gray-300'>$260</p>
+                  <p className='text-red-400 bg-red-200 rounded-xl  p-1 text-xs ml-2'>-20%</p>
                 </div>
+
+              </div>
+            ))
+          }
+
+        </div>
             </section>
         </div>
     )

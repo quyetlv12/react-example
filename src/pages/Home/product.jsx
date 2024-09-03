@@ -28,27 +28,30 @@ const Product = () => {
   return (
     <div>
         <section className='flex'>
-            <div className='flex m-7 '>
-                <div className='mr-2'>
-                    <img src={img1} alt="" className='mb-2'/>
-                    <img src={img2} alt="" className='mb-2'/>
-                    <img src={img3} alt="" className='mb-2'/>
-                </div>
+       
+       
+                <div className='flex m-7 '>
+                {/* <div className='mr-2'>
+                    <img src={product?.thumnail} alt="" className='mb-2'/>
+                    <img src={product?.thumnail2} alt="" className='mb-2'/>
+                    <img src={product?.thumnail} alt="" className='mb-2'/>
+                </div> */}
                 <div> 
-                    <img src={img4} alt="" />
+                    <img src={product?.thumnail} alt="" />
                 </div>
             </div>
+        
             <div className='flex flex-col m-7'>
                 <div>
-                    <h1 className='text-2xl font-bold'>ONE LIFE GRAPHIC T-SHIRT</h1>
+                    <h1 className='text-2xl font-bold'>{product?.name}</h1>
                     <img src={img5} alt="" />
                     <div className='flex'>
-                        <p className='text-2xl font-bold'>$260</p>
+                        <p className='text-2xl font-bold'>{product?.price}</p>
                         <p className='line-through text-2xl text-gray-400 pl-2'>$300</p>
                         <p className='text-red-400 bg-red-200 p-1 rounded-2xl ml-2'>-40%</p>
                     </div>
                     
-                    <p>This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.</p>
+                    <p>{product?.description}</p>
                 </div>
                 <div className='my-2 py-2 border-t-2 '>
                     <p>Select Colors</p>

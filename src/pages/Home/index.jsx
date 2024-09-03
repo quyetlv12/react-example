@@ -62,6 +62,7 @@ const Home = () => {
         <div className='text-center text-2xl my-7 font-bold'>NEW ARRIVALS</div>
         <div className='grid grid-cols-4 gap-5'>
           {
+           
             products.length > 0 && products.map((_item, index) => (
               <div className='flex flex-col' key={index}>
                 <img src={_item?.thumnail} alt="" className='rounded-lg' />
