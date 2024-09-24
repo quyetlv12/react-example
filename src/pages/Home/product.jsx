@@ -11,10 +11,22 @@ import img9 from '../../assets/img/Frame 34 (2).png'
 import img10 from '../../assets/img/Frame 38 (2).png'
 import { useParams } from 'react-router'
 import { productService } from '../../services/product'
+import { cartState } from '../../store/cart'
+import { useRecoilState } from 'recoil'
 
 const Product = () => {
     const params = useParams()    
     const [product, setProduct] = useState(null)
+    const [carts, setCarts] = useRecoilState(cartState);
+    const addToCart = () => {
+        const newProduct =  {
+            id : product?.id,
+            image : product?.thumnail,
+            name : product?.name,
+            price : product?.price
+        }
+        setCarts([...carts ,newProduct])
+    }
     useEffect(() => {
      const getDetail = async () => {
         const res = await productService.getDetailProduct(params.id)
@@ -73,7 +85,7 @@ const Product = () => {
                         <button className='w-4/12 text-center '>+</button>
                     </div>
                     <div className=' w-8/12 '>
-                        <button className='border-2 bg-black text-white rounded-3xl ml-2 p-5 w-full'> Add to Cart</button>
+                        <button className='border-2 bg-black text-white rounded-3xl ml-2 p-5 w-full' onClick={addToCart}> Thêm vào giỏ hàng</button>
                     </div>
                 </div>
             </div>

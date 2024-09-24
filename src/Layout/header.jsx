@@ -1,9 +1,12 @@
 import React from 'react'
-import logo from '../assets/img/SHOP.CO.png'
 import { FaShoppingCart } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
+import { useRecoilValue } from 'recoil'
+import logo from '../assets/img/SHOP.CO.png'
+import { cartState } from '../store/cart'
 
 const Header = () => {
+  const carts = useRecoilValue(cartState);
   return (
     <>
       {/* source https://github.com/spacemadev/Free-blue-star-tailwind-landing-page-template */}
@@ -33,34 +36,40 @@ const Header = () => {
                   d="M4 6h16M4 12h16m-7 6h7"
                 />
               </svg>
+
             </button>
           </div>
           {/* Center section: Menu */}
           <nav className="hidden md:flex md:flex-grow justify-center">
             <ul className="flex justify-center space-x-4 text-white">
               <li>
-                <a href="/" className="hover:text-secondary hover:text-black font-bold">
+                <Link to="/" className="hover:text-secondary hover:text-black font-bold">
                   Trang chủ
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/product" className="hover:text-secondary hover:text-black font-bold">
+                <Link to="/product" className="hover:text-secondary hover:text-black font-bold">
                   Sản phẩm
-                </a>
+                </Link>
+
               </li>
               <li>
-                <a href="/category" className="hover:text-secondary hover:text-black font-bold">
+                <Link to="/product" className="hover:text-secondary hover:text-black font-bold">
                   Danh mục
-                </a>
+                </Link>
+
+
               </li>
             </ul>
           </nav>
           {/* Right section: Buttons (for desktop) */}
           <div className="hidden lg:flex items-center space-x-4">
-            <Link to={'/cart'}>
+            <div className='relative'>   <Link to={'/cart'}>
               <FaShoppingCart className='text-white cursor-pointer hover:bg-gray-800 hover:rounded-md p-1' size={35} />
-
-            </Link>
+              <span className='absolute -top-1 -right-1 bg-red-500 w-5 h-5 text-center text-white rounded-full'>
+                {carts.length}
+              </span>
+            </Link></div>
 
             <a
               href="/register"
