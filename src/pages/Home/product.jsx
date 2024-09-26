@@ -23,7 +23,8 @@ const Product = () => {
             id : product?.id,
             image : product?.thumnail,
             name : product?.name,
-            price : product?.price
+            price : product?.price,
+            quantity : 1
         }
         setCarts([...carts ,newProduct])
     }

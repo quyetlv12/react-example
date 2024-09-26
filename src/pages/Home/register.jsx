@@ -1,10 +1,32 @@
 import React from 'react'
+import { authservice } from '../../services/auth'
+import { useNavigate } from 'react-router'
+import { useSetRecoilState } from 'recoil'
+import { authAtom } from '../../store/auth'
+import { useForm } from 'react-hook-form'
 
 const Register = () => {
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm()
+  const navigate = useNavigate()
+  const setUser = useSetRecoilState(authAtom)
+  const onSupmitData = async (data) => {
+    const res = await authservice.register(data)
+    if (res.status === 201){
+      setUser(res.data)
+      navigate('/login')
+    }
+  }
+  
+  
   return (
     <section className="bg-white dark:bg-gray-900">
   <div className="container flex items-center justify-center min-h-screen px-6 mx-auto">
-    <form className="w-full max-w-md">
+    <form onSubmit={handleSubmit(onSupmitData)} className="w-full max-w-md">
       <div className="flex justify-center mx-auto">
         <img
           className="w-auto h-7 sm:h-8"
@@ -35,6 +57,7 @@ const Register = () => {
           id="name"
           className="block w-full py-3 text-gray-700 bg-white border rounded-lg px-11 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
           placeholder="Username"
+          {...register('name')}
         />
       </div>
       <div className="relative flex items-center mt-6">
@@ -60,6 +83,7 @@ const Register = () => {
           id="email"
           className="block w-full py-3 text-gray-700 bg-white border rounded-lg px-11 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
           placeholder="Email address"
+          {...register('email')}
         />
       </div>
       <div className="relative flex items-center mt-4">
@@ -85,6 +109,7 @@ const Register = () => {
           id="phone"
           className="block w-full px-10 py-3 text-gray-700 bg-white border rounded-lg dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
           placeholder="Phone"
+          {...register('phone')}
         />
       </div>
       <div className="relative flex items-center mt-4">
@@ -110,6 +135,7 @@ const Register = () => {
           id="password"
           className="block w-full px-10 py-3 text-gray-700 bg-white border rounded-lg dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
           placeholder="Password"
+          {...register('password')}
         />
       </div>
       <div className="relative flex items-center mt-4">
@@ -135,6 +161,7 @@ const Register = () => {
           id="password_confirmation"
           className="block w-full px-10 py-3 text-gray-700 bg-white border rounded-lg dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
           placeholder="Confirm Password"
+          {...register('password_confirmation')}
         />
       </div>
       <div className="flex">
@@ -142,7 +169,7 @@ const Register = () => {
       </div>
       <div className="mt-6">
         <button
-          type="button"
+          type="submit"
           id="btn-register"
           className="w-full px-6 py-3 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-500 rounded-lg hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50"
         >

@@ -54,7 +54,7 @@ const Header = () => {
 
               </li>
               <li>
-                <Link to="/product" className="hover:text-secondary hover:text-black font-bold">
+                <Link to="/category" className="hover:text-secondary hover:text-black font-bold">
                   Danh mục
                 </Link>
 

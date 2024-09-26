@@ -65,7 +65,10 @@ const Home = () => {
            
             products.length > 0 && products.map((_item, index) => (
               <div className='flex flex-col' key={index}>
+                <Link to={`/product/${_item?.id}`}> 
                 <img src={_item?.thumnail} alt="" className='rounded-lg' />
+                </Link>
+                
                 <Link to={`/product/${_item?.id}`} >
                   <p className='font-bold'>{_item?.name}</p>
                 </Link>
